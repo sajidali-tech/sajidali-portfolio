@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+  11. Portfolio
+----------------------------------------------------------------*/
+.cs_portfolio.cs_style_1 {
+  .cs_portfolio_btn {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #fff;
+    z-index: 2;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--web-wash);
+    padding: 32px 28px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: var(--accent);
+    }
+  }
+  &:hover {
+    .cs_portfolio_btn {
+      bottom: 30px;
+      left: 30px;
+      right: 30px;
+      opacity: 1;
+    }
+  }
+  .cs_portfolio_grid_btn.text-center {
+    margin-top: -5px;
+  }
+}

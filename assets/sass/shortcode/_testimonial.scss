@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+  9. Testimonial
+----------------------------------------------------------------*/
+.cs_rating {
+  width: 92px;
+  height: 14px;
+  position: relative;
+  font-size: 14px;
+  display: inline-flex;
+  i {
+    margin-right: 3px;
+  }
+  .cs_rating_percentage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    overflow: hidden;
+  }
+  .cs_rating_percentage {
+    width: 50%;
+  }
+}
+.cs_testimonial.cs_style_1 {
+  background-color: var(--ternary);
+  padding: 35px 35px 50px 35px;
+  @media (max-width: 1199px) {
+    padding: 35px 30px 50px 30px;
+  }
+  .cs_testimonial_avatar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    img {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .cs_quote_icon {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+  }
+}
