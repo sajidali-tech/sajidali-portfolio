@@ -1,0 +1,102 @@
+:root {
+    --bg-main: #0B0F19;
+    --bg-card: #111827;
+    --bg-card-hover: #1f2937;
+    --border-color: #1F2937;
+    --brand-primary: #0ea5e9;
+    --brand-primary-light: #38bdf8;
+    --brand-primary-dark: #0284c7;
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --radius-card: 1rem;
+    --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 15px rgba(14, 165, 233, 0.2);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-muted);
+    overflow-x: hidden;
+}
+
+/* Glass Navigation */
+.glass-nav {
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Text Gradients */
+.gradient-text {
+    background: linear-gradient(135deg, var(--brand-primary-light) 0%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Reusable Card Styles */
+.card-base {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-card);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--brand-primary-light);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Pill / Tag Styles */
+.tech-pill {
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.tech-pill:hover {
+    background: rgba(14, 165, 233, 0.1);
+    border-color: rgba(14, 165, 233, 0.3);
+    color: var(--brand-primary-light);
+}
+
+/* Background Grid */
+.bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Mobile Menu Lock */
+.menu-open {
+    overflow: hidden;
+}
+
+/* Offset for Sticky Header */
+html {
+    scroll-padding-top: 100px;
+    overflow-x: hidden;
+}
+
+/* Accessible Keyboard Focus Indicators */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--brand-primary-light);
+    outline-offset: 2px;
+}
+
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
