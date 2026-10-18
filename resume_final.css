@@ -1,0 +1,244 @@
+/* resume_final.css - Premium Corporate Styling Optimized for Exact 1-Page A4 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --text-main: #1f2937;
+    --text-heading: #0f172a;
+    --text-sub: #4b5563;
+    --text-muted: #64748b;
+    --accent: #0f172a;
+    --accent-blue: #0284c7;
+    --border-color: #cbd5e1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-main);
+    background-color: #f8fafc;
+    font-size: 8.4pt;
+    line-height: 1.30;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    padding: 8mm 12mm;
+    background: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    body {
+        background-color: #ffffff;
+    }
+    .page {
+        margin: 0;
+        padding: 8mm 12mm;
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+    }
+}
+
+/* Typography & Titles */
+h1 {
+    color: var(--text-heading);
+    font-size: 19pt;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2.title {
+    color: var(--accent-blue);
+    font-size: 10pt;
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h3.section-title {
+    color: var(--accent);
+    font-size: 9.3pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1.2px solid var(--border-color);
+    padding-bottom: 1.5px;
+    margin-top: 5px;
+    margin-bottom: 3.5px;
+}
+
+/* Header */
+.header-container {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-size: 8.2pt;
+    color: var(--text-sub);
+    margin-bottom: 1px;
+}
+
+.contact-info a {
+    color: var(--text-sub);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
+.divider {
+    color: #94a3b8;
+    margin: 0 2px;
+    font-size: 7.5pt;
+}
+
+/* Professional Summary */
+p.summary {
+    text-align: justify;
+    color: var(--text-main);
+    line-height: 1.30;
+    margin-bottom: 3px;
+}
+
+/* Skills */
+.skill-row {
+    display: flex;
+    margin-bottom: 1.6px;
+    align-items: baseline;
+    font-size: 8.3pt;
+}
+
+.skill-label {
+    font-weight: 700;
+    color: var(--text-heading);
+    width: 172px;
+    flex-shrink: 0;
+}
+
+.skill-val {
+    color: var(--text-main);
+}
+
+/* Experience */
+.job {
+    margin-bottom: 4px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5px;
+}
+
+.job-title {
+    font-size: 9.2pt;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.job-date {
+    font-size: 8.1pt;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.company {
+    font-size: 8.8pt;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 1.5px;
+}
+
+ul {
+    padding-left: 14px;
+    margin-bottom: 1.5px;
+}
+
+li {
+    margin-bottom: 1.2px;
+    text-align: left;
+    color: var(--text-main);
+    line-height: 1.28;
+}
+
+/* Education */
+.edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.8px;
+    font-size: 8.3pt;
+}
+
+.edu-inst {
+    font-weight: 500;
+    color: var(--text-sub);
+}
+
+.edu-degree {
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+/* Selected Portfolio */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5px 10px;
+    margin-top: 2.5px;
+}
+
+.project {
+    font-size: 8.1pt;
+    line-height: 1.22;
+}
+
+.project-title {
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.project a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    font-size: 7.5pt;
+}
